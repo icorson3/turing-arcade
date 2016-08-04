@@ -1,0 +1,18 @@
+<div class="user-show">
+
+  <div class="container-fluid">
+    <% if @user %>
+      <h2>Welcome, <%= @user.username %></h2>
+
+      <h3><%= "#{@user.username}'s Games" %></h3>
+        <%= render partial: 'new_game_form' %>
+
+    <% else %>
+      <%= link_to "Sign in with Github", github_login_path, style: "color: black", class: "css_class"%>
+      <div class="pull-right">
+        <p> Want to play as a Guest?</p>
+      <%= link_to "Browse All Games", games_path, style: "color: black", class: "css_class"%>
+    </div>
+    <% end %>
+  </div>
+</div>

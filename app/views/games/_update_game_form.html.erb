@@ -1,0 +1,10 @@
+<p>If you do not wish to update a parameter, leave it as is</p></br>
+  <div class="form-group">
+    <input class="form-control hidden" type="text" id="current-user" value="<%= current_user.id %>">
+    <input class="form-control" type="text" id="game-name" value="<%= @game.name %>">
+    <input class="form-control" type="text" id="game-heroku" value="<%= @game.heroku_url %>">
+    <input class="form-control" type="text" id="game-github" value = "<%= @game.github_url %>">
+    <input class="form-control" type="text" id="game-screenshot" value= "<%= @game.screenshot_or_gif %>">
+    <input class="btn btn-default pull-right" id="update-game" type="button" name="submit" value="Update My Game!">
+    <input class="btn btn-default pull-right" id="destroy-game" type="button" name="submit" value="Delete My Game!">
+  </div>

@@ -1,0 +1,13 @@
+<div class="container-fluid">
+
+  <% if current_user %>
+    Hello, <%= current_user.username %>
+    <%= link_to "Visit Your Dashboard", dashboard_path(current_user) %>
+    <%= link_to "Logout", logout_path, method: :delete, style: "color: black", class: "css_class" %>
+  <% else %>
+    <%= link_to "Sign in with Github", github_login_path, style: "color: black", class: "css_class"%>
+    <div class="pull-right">
+    <%= link_to "Play as a Guest", games_path, style: "color: black", class: "css_class"%>
+  </div>
+  <% end %>
+</div>

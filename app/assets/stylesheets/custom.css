@@ -1,0 +1,126 @@
+body {
+  /*border: 10px solid black;*/
+  font-family: 'Press Start 2P', cursive;
+  padding: 0;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/57/99/01/579901ad1cb271dc56fe0d557579934a.gif") ;
+  background-size: cover;
+}
+
+html, body {
+    height: 100%;
+}
+
+ul.navbar-nav > li > a {
+  margin-top: 20px;
+}
+
+.list-group {
+  height: 440px;
+}
+
+.list-group-item > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -155px;
+}
+
+footer, .push {
+    height: 155px;
+}
+
+footer {
+  text-align: center;
+}
+#links:visited {
+  color: #98FB98;
+}
+#main-header {
+  color: green;
+}
+
+nav.navbar.navbar-default.poop-bar {
+  background-color: black;
+  width: 100%;
+  margin-top: 0;
+}
+
+nav.navbar.navbar-default.navbar-fixed-bottom {
+  background-color: black;
+  color: gray;
+}
+
+nav.navbar.navbar-default.navbar-fixed-bottom > .container > p {
+  margin-top: 17px;
+  font-size: 8px;
+  text-align: center;
+}
+
+
+.collapse.navbar-collapse {
+  background-color: white;
+}
+
+.mushroom-img {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.game-show {
+  background-color: white;
+  width: 100%;
+}
+
+.user-show {
+  background-color: white;
+}
+
+.header {
+  background-color: white;
+}
+
+#copyright {
+  background-color: white;
+}
+
+.game-title {
+  padding: 15px;
+  text-align: center;
+}
+
+.game-image {
+}
+
+#game-image {
+  border-radius: 5px;
+  max-height: 300px;
+
+}
+
+.collab-card {
+  width: 25%;
+  display: inline-block;
+}
+.collab-image {
+  height: 100px;
+  border-radius: 50px;
+}
+.collaborators {
+  padding: 15px;
+  text-align: center;
+}
+
+.play-game {
+  background-color: green;
+  position: absolute;
+  top: 50%;
+}
+
+.wrapper-game {
+    text-align: center;
+}

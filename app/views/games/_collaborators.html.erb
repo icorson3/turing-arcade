@@ -1,0 +1,10 @@
+<div class="collaborators">
+  <h4>Collaborators on this Game: </h4>
+    <% @collaborators.each do |collaborator| %>
+      <div class="collab-card">
+        <span><%= image_tag collaborator.avatar_url, class: "collab-image" %></span>
+        <h5><%= collaborator.login %></h5>
+          <%= link_to "Github Url", collaborator.html_url %>
+      </div>
+    <% end %>
+</div>
