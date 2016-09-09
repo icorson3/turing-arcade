@@ -1,5 +1,4 @@
 body {
-  /*border: 10px solid black;*/
   font-family: 'Press Start 2P', cursive;
   padding: 0;
   background-image: url("https://s-media-cache-ak0.pinimg.com/originals/57/99/01/579901ad1cb271dc56fe0d557579934a.gif") ;
@@ -10,9 +9,6 @@ html, body {
     height: 100%;
 }
 
-ul.navbar-nav > li > a {
-  margin-top: 20px;
-}
 
 .list-group {
   height: 440px;
@@ -41,7 +37,11 @@ footer {
   color: #98FB98;
 }
 #main-header {
+  font-size: 32px;
   color: green;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
 }
 
 nav.navbar.navbar-default.poop-bar {
@@ -67,8 +67,8 @@ nav.navbar.navbar-default.navbar-fixed-bottom > .container > p {
 }
 
 .mushroom-img {
+  width: 48px;
   margin-left: 15px;
-  margin-top: 10px;
 }
 
 .game-show {
@@ -93,13 +93,9 @@ nav.navbar.navbar-default.navbar-fixed-bottom > .container > p {
   text-align: center;
 }
 
-.game-image {
-}
-
 #game-image {
   border-radius: 5px;
   max-height: 300px;
-
 }
 
 .collab-card {
@@ -127,4 +123,39 @@ nav.navbar.navbar-default.navbar-fixed-bottom > .container > p {
 
 .alumni {
   text-align: center;
+}
+
+.homepage-options {
+  width: 1000px;
+  height: 100px;
+  position: absolute;
+  top:0;
+  bottom: 300px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  margin: auto;
+}
+
+#github-login {
+  width: 310px;
+  height: 50px;
+  background-color: #D1F0B1;
+  border-style: outset;
+  border-radius: 15px/50px;
+  padding-top: 2px;
+  left: 10px;
+}
+
+#guest-login {
+  left: 200px;
+  border-style: outset;
+  border-radius: 15px/50px;
+  padding-top: 2px;
+  padding-bottom: 10px;
+  background-color: #D1F0B1
+}
+
+#right-nav {
+  padding-top: 15px;
 }
