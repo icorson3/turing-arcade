@@ -1,6 +1,4 @@
-
 <div class="user-show">
-
   <div class="container-fluid">
     <% if @user %>
       <h2>Welcome, <%= @user.username %></h2>
@@ -10,11 +8,10 @@
     <div class="row">
       <div class="homepage-options">
         <div class="col-md-6" id="github-login">
-
-          <%= link_to "Sign in with Github", github_login_path, style: "color: black", class: "css_class"%>
+          <strong><%= link_to "Sign in with Github", github_login_path, style: "color: black", class: "css_class"%></strong>
         </div>
         <div class="col-md-6" id="guest-login">
-            <p> Want to play as a Guest?</p>
+            <strong><p> Want to play as a Guest?</p></strong>
           <%= link_to "Browse All Games", games_path, style: "color: black", class: "css_class"%>
         </div>
       </div>
