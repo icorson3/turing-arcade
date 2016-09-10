@@ -30,12 +30,6 @@ Game.create!(name: "GO GO NYAN CAT",
               screenshot_or_gif: "https://camo.githubusercontent.com/dec697f902f448a780c64061417e43acda415a2f/687474703a2f2f672e7265636f726469742e636f2f5774395547397270566e2e676966"
               )
 
-Game.create!(name: "TypprBurn",
-              github_url: "https://github.com/jeneve/typrr-burn",
-              heroku_url: "https://jeneve.github.io/typrr-burn/",
-              screenshot_or_gif: "http://g.recordit.co/bni8wbO2My.gif"
-              )
-
 Game.create!(name: "Bounty Hunter X",
               github_url: "https://github.com/Salvi6God/bounty_hunter_x",
               heroku_url: "https://salvi6god.github.io/bounty_hunter_x/",
@@ -74,6 +68,3 @@ User.create!(username: "a",
 
 User.create!(username: "b",
               game_id: 8)
-
-User.create!(username: "c",
-              game_id: 9)
