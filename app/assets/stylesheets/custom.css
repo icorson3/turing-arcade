@@ -10,26 +10,31 @@ html, body {
     height: 100%;
 }
 
-
-.list-group {
-  height: 440px;
+.list-group-item:first-child {
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 .list-group-item > img {
-  width: 100%;
-  object-fit: contain;
+  position: relative;
+  width:  200px;
+  height: 150px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+
+}
+.list-group {
+  font-size: 15px;
+  height: 440px;
 }
 
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -155px;
+.list-group-item:last-child {
+  background-color: #FFFFE5;
+  opacity: .98
+  height: 200px;
 }
 
-footer, .push {
-    height: 155px;
-}
 
 footer {
   text-align: center;
@@ -40,7 +45,7 @@ footer {
 }
 
 #main-header {
-  font-size: 32px;
+  font-size: 40px;
   color: green;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -48,7 +53,6 @@ footer {
 }
 
 nav.navbar.navbar-default.poop-bar {
-  font-family: 'Press Start 2P', cursive;
   background-color: black;
   width: 100%;
   margin-top: 0;
@@ -71,29 +75,32 @@ nav.navbar.navbar-default.navbar-fixed-bottom > .container > p {
 }
 
 .mushroom-img {
-  width: 48px;
-  margin-left: 15px;
+  width: 30px;
+  margin-top: 5px;
 }
 
 .game-show {
   background-color: white;
-  width: 100%;
+  opacity: .96;
+  width: 700px;
+  margin: auto;
+  border-radius: 15px;
+  border-style: outset;
+  padding-bottom: 20px;
 }
 
 .user-show {
   background-color: white;
+  opacity: .96;
   border-style: outset;
-  border-radius: 15px/50px;
+  border-radius: 15px;
   margin-left:100px;
   margin-right: 100px;
 }
 
 .header {
   background-color: white;
-}
-
-#copyright {
-  background-color: white;
+  opacity: .96;
 }
 
 .game-title {
@@ -125,48 +132,33 @@ nav.navbar.navbar-default.navbar-fixed-bottom > .container > p {
   top: 50%;
 }
 
+.play-link {
+  font-size: 25px;
+}
+
 .wrapper-game {
     text-align: center;
 }
 
 .alumni {
   text-align: center;
-}
-
-.homepage-options {
-  width: 1000px;
-  height: 100px;
-  position: absolute;
-  top:0;
-  bottom: 300px;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  margin: auto;
-}
-
-#github-login {
-  font-size: 25px;
-  width: 280px;
-  height: 50px;
-  background-color: white;
-  border-style: outset;
-  border-radius: 15px/50px;
-  padding-top: 2px;
-  text-align: center;
-
+  font-size: 20px;
 }
 
 #guest-login {
   background-color: white;
-  font-size: 25px;
+  font-size: 23px;
   text-align: center;
-  width: 340px;
-  left: 340px;
+  width: 450px;
   border-style: outset;
-  border-radius: 15px/50px;
+  border-radius: 15px;
   padding-top: 2px;
   padding-bottom: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  margin: auto;
 }
 
 #right-nav {
@@ -187,5 +179,13 @@ nav.navbar.navbar-default.navbar-fixed-bottom > .container > p {
 .header {
   margin-bottom: 10px;
   border-style: outset;
-  border-radius: 15px/50px;
+  border-radius: 15px;
+}
+
+.browse_css_class {
+  background-color: yellow;
+}
+
+#update_game_form {
+  margin-bottom: 10px;
 }

@@ -5,17 +5,12 @@
       <h3><%= "#{@user.username}'s Games" %></h3>
         <%= render partial: 'new_game_form' %>
     <% else %>
-    <div class="row">
-      <div class="homepage-options">
-        <div class="col-md-6" id="github-login">
-          <strong><%= link_to "Sign in with Github", github_login_path, style: "color: black", class: "css_class"%></strong>
-        </div>
-        <div class="col-md-6" id="guest-login">
-            <strong><p> Want to play as a Guest?</p></strong>
-          <%= link_to "Browse All Games", games_path, style: "color: black", class: "css_class"%>
-        </div>
+      <div  id="guest-login">
+        <p> The Turing Arcade was created as a portal for games created by <%= link_to 'Turing', 'https://www.turing.io/', target: 'blank' %> Students.</br></br>
+          To see the work our students have done:</br></br>
+        <%= link_to "Browse All Games", games_path, style: "color: black", class: "browse_css_class"%></br></br>
+        To add your own game, you must sign in through <%= link_to 'github', github_login_path %>.</p>
       </div>
-    </div>
     <% end %>
   </div>
 </div>
