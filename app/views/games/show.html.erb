@@ -1,22 +1,22 @@
-<div class="container">
+<div class="container" id="standard-game">
   <div class="game-show" data-game-id="<%= @game.id %>">
     <span class="game-title"><h1><%= @game.name %></h1>
     <div class='game-image'><%= image_tag @game.screenshot_or_gif, id: "game-image" %></div></span>
     <div class="wrapper-game">
       <% unless @game.nil? %>
-        <a class="play-button" href="<%= @game.heroku_url %>" target="_blank">Play The Game!</a>
+        <a class="play-link" href="<%= @game.heroku_url %>" target="_blank">Play The Game!</a>
       <% end %>
     </div>
-      <div id="game-content">
-        <% if @game.users.include?(current_user) %>
-          <%= render partial: 'update_game_form' %>
-        <% end %>
-
-        <%= render partial: 'collaborators' %></br>
-      </div>
-      <div class="alumni">
-
+    <%= render partial: 'collaborators' %></br>
+    <div class="alumni">
+      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
       <%= link_to "Looking to hire a graduate? View our Alumni portfolios", "https://www.turing.io/alumni", target: "_blank"%>
+      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
     </div>
+  </div>
+  <div id="game-content">
+    <% if @game.users.include?(current_user) %>
+    <%= render partial: 'update_game_form' %>
+    <% end %>
   </div>
 </div>
