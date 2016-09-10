@@ -1,6 +1,6 @@
-<p>If you do not wish to update a parameter, leave it as is:</p>
-<div class="form-group">
-
+<div class="form-group" id="update-game-form">
+<p>Want to update or delete your game? </br>
+  If you do not wish to update a parameter, leave it as is:</p>
   <input class="form-control hidden" type="text" id="current-user" value="<%= current_user.id %>">
   <input class="form-control" type="text" id="game-name" value="<%= @game.name %>">
   <input class="form-control" type="url" id="game-heroku" value="<%= @game.heroku_url %>">

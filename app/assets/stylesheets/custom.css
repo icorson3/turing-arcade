@@ -165,15 +165,35 @@ nav.navbar.navbar-default.navbar-fixed-bottom > .container > p {
   padding-top: 15px;
 }
 
-.form-group {
-    width: 800px;
-    height: 100px;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+#update-game-form {
+  width: inherit;
+  height: 240px;
+  background-color: white;
+  left:0;
+  right:0;
+  position: absolute;
+  padding: 10px;
+  margin: auto;
+  border-style: outset;
+  border-radius: 15px;
+  opacity: .96;
+  top: 900px;
+  margin-bottom: 75px;
+}
+
+#new-game {
+  width: 600px;
+  height: 200px;
+  background-color: white;
+  left:0;
+  right:0;
+  position: absolute;
+  padding: 10px;
+  margin: auto;
+  top: 300px;
+  border-style: outset;
+  border-radius: 15px;
+  opacity: .96;
 }
 
 .header {
@@ -188,4 +208,11 @@ nav.navbar.navbar-default.navbar-fixed-bottom > .container > p {
 
 #update_game_form {
   margin-bottom: 10px;
+}
+
+.deleted-game {
+  background-color: white;
+  border-radius: 15px;
+  border-style: outset;
+  opacity: .96;
 }

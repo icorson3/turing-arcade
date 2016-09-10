@@ -3,13 +3,13 @@
 
   </ul>
   <p>Want to add your game?<p>
-  <div class="form-group">
+  <div class="form-group" id="new-game">
     <input class="form-control hidden" type="text" id="current-user" value="<%= current_user.id %>">
     <input class="form-control hidden" type="text" id="current-role" value="<%= current_user.role %>">
     <input class="form-control" type="text" id="game-name" value='Name'>
-    <input class="form-control" type="url" id="game-heroku" value='Heroku URL: Must be in full url'>
-    <input class="form-control" type="url" id="game-github" value = 'Github URL: Must be in full url'>
-    <input class="form-control" type="url" id="game-screenshot" value= "Gif: Must be in full url">
+    <input class="form-control" type="url" id="game-heroku" value='Game Link: Must be the full url'>
+    <input class="form-control" type="url" id="game-github" value = 'Github URL: Must be the full url'>
+    <input class="form-control" type="url" id="game-screenshot" value= "Gif: Must be the full url">
     <input class="btn btn-default pull-right" id="create-game" type="button" name="submit" value="Add My Game!">
   </div>
 <% else %>

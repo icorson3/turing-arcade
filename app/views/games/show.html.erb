@@ -7,18 +7,16 @@
         <a class="play-link" href="<%= @game.heroku_url %>" target="_blank">Play The Game!</a>
       <% end %>
     </div>
-    <div id="game-content">
-
-        <% if @game.users.include?(current_user) %>
-          <%= render partial: 'update_game_form' %>
-        <% end %>
-
-        <%= render partial: 'collaborators' %></br>
-    </div>
+    <%= render partial: 'collaborators' %></br>
     <div class="alumni">
       <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
       <%= link_to "Looking to hire a graduate? View our Alumni portfolios", "https://www.turing.io/alumni", target: "_blank"%>
       <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
     </div>
+  </div>
+  <div id="game-content">
+    <% if @game.users.include?(current_user) %>
+    <%= render partial: 'update_game_form' %>
+    <% end %>
   </div>
 </div>

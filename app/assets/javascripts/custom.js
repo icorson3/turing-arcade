@@ -12,7 +12,7 @@ $(document).ready(function() {
   });
 
   $("#update-game").on('click', function () {
-    var gameId = $(this).parent().parent().parent().data("game-id");
+    var gameId = $(this).parent().parent().parent().find(".game-show").data("game-id");
     var gameParams = { game: {
       id: gameId,
       user_id: $("#current-user").val(),
@@ -29,7 +29,7 @@ $(document).ready(function() {
   });
 
   $("#destroy-game").on('click', function(){
-    var gameId = $(this).parent().parent().parent().data("game-id");
+    var gameId = $(this).parent().parent().parent().find(".game-show").data("game-id");
     var gameParams = { game: {
       user_id: $("#current-user").val()
     }};
@@ -37,7 +37,10 @@ $(document).ready(function() {
       type: 'DELETE',
       url: "/api/v1/games/" + gameId,
       success: function() {
-        $("#game-content").html("<p> The game was successfully deleted </p>");
+        $("#standard-game").html("<p> The game was successfully deleted </p>").addClass('deleted-game');
+        $(".game-title").hide();
+        $(".play-link").hide();
+        $(".game-image").hide();
       }
     });
   });
