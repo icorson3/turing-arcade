@@ -24,6 +24,7 @@ html, body {
   background-size:     cover;
 
 }
+
 .list-group {
   font-size: 15px;
   height: 440px;
@@ -31,7 +32,7 @@ html, body {
 
 .list-group-item:last-child {
   background-color: #FFFFE5;
-  opacity: .98
+  opacity: .98;
   height: 200px;
 }
 

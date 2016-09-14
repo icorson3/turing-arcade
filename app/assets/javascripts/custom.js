@@ -68,7 +68,7 @@ function createGame(gameParams) {
       var errorKeys = Object.keys(errorObject);
       for(var i = 0; i < errorKeys.length; i++){
         errorObject[errorKeys[i]].forEach(function(error) {
-          $("#welcome").append(`<span>${errorKeys[i]}:${error},  </span>`).css('background-color', '#ffcccc');
+          $("#welcome").append("<span>${errorKeys[i]}:${error},  </span>").css('background-color', '#ffcccc');
         });
       }
     }
