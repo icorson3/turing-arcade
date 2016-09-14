@@ -9,9 +9,13 @@ class Api::V1::GamesController < ApiBaseController
   end
 
   def create
-    game = Game.create(game_params)
-    User.assign_game(current_user.id, game.id)
-    render json: game
+    @game = Game.new(game_params)
+    if @game.save
+      User.assign_game(current_user.id, @game.id)
+      render json: @game
+    else
+      render json: { errors: @game.errors }, status: 500
+    end
   end
 
   def update
@@ -25,6 +29,6 @@ class Api::V1::GamesController < ApiBaseController
 
   private
     def game_params
-      params.require(:game).permit(:name, :github_url, :heroku_url, :screenshot_or_gif, :id)
+      params.require(:game).permit(:name, :github_url, :heroku_url, :screenshot_or_gif, :id, :user)
     end
 end

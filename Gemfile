@@ -15,6 +15,7 @@ gem 'omniauth-github'
 gem 'active_model_serializers'
 gem 'responders'
 gem 'simplecov', :require => false, :group => :test
+gem 'validate_url'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -24,6 +25,7 @@ group :development, :test do
   gem 'webmock'
   gem 'vcr'
   gem 'database_cleaner'
+  gem 'pry'
 end
 
 group :development do
