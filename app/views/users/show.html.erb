@@ -1,16 +1,14 @@
-<div class="user-show">
-  <div class="container-fluid">
-    <% if @user %>
-      <h2>Welcome, <%= @user.username %></h2>
-      <h3><%= "#{@user.username}'s Games" %></h3>
-        <%= render partial: 'new_game_form' %>
-    <% else %>
-      <div  id="guest-login">
-        <p> The Turing Arcade was created as a portal for games created by <%= link_to 'Turing', 'https://www.turing.io/', target: 'blank' %> Students.</br></br>
-          To see the work our students have done:</br></br>
-        <%= link_to "Browse All Games", games_path, style: "color: black", class: "browse_css_class"%></br></br>
-        To add your own game, you must sign in through <%= link_to 'github', github_login_path %>.</p>
-      </div>
-    <% end %>
+<% if @user %>
+  <div class="user-show" id="welcome">
+    <h2>Welcome, <%= @user.username %></h2>
+    <h3><%= "#{@user.username}'s Games" %></h3>
+      <%= render partial: 'new_game_form' %>
   </div>
-</div>
+<% else %>
+  <div  id="guest-login">
+    <p> The Turing Arcade was created as a portal for games created by <%= link_to 'Turing', 'https://www.turing.io/', target: 'blank' %> Students.</br></br>
+      To see the work our students have done:</br></br>
+    <%= link_to "Browse All Games", games_path, style: "color: black", class: "browse_css_class"%></br></br>
+    To add your own game, you must sign in through <%= link_to 'github', github_login_path %>.</p>
+  </div>
+<% end %>

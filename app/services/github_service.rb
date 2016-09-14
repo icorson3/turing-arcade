@@ -15,7 +15,6 @@ class GithubService
     JSON.parse(collaborators.body)
   end
 
-
   private
 
     def conn
