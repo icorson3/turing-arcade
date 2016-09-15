@@ -2,7 +2,6 @@ class Game < ApplicationRecord
   has_many :users, dependent: :destroy
 
   before_save :create_slug
-  before_update :require_user
 
   validates :github_url, url: true, presence: true
   validates :name, presence: true
