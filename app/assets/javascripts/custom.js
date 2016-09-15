@@ -21,7 +21,7 @@ $(document).ready(function() {
     var gameId = $(this).parent().parent().parent().find(".game-show").data("game-id");
     var gameParams = { game: {
       id: gameId,
-      user_id: $("#current-user").val(),
+      user_id: $("#current_user").val(),
       name: $("#game-name").val(),
       heroku_url: $("#game-heroku").val(),
       github_url: $("#game-github").val(),
@@ -31,6 +31,9 @@ $(document).ready(function() {
       type: 'PATCH',
       url: "/api/v1/games/" + gameId,
       data: gameParams,
+      success: function () {
+        $("p").html("Game was successfully updated. Return to all games to see changes.");
+      }
     });
   });
 

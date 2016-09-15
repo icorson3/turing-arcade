@@ -29,6 +29,6 @@ class Api::V1::GamesController < ApiBaseController
 
   private
     def game_params
-      params.require(:game).permit(:name, :github_url, :heroku_url, :screenshot_or_gif, :id, :user)
+      params.require(:game).permit(:name, :github_url, :heroku_url, :screenshot_or_gif, :id)
     end
 end
