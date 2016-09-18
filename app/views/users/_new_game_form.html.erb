@@ -1,4 +1,3 @@
-<% if @user.game.id == 1 %>
   <ul id="one-game">
 
   </ul>
@@ -13,8 +12,3 @@
     <input class="form-control" type="text" id="game-check" placeholder="What is the wifi password at Turing?">
     <input class="btn btn-default pull-right" id="create-game" type="button" name="submit" value="Add My Game!">
   </div>
-<% else %>
-  <ul>
-    <li><%= link_to @user.game.name, game_path(@user.game.slug) %></li>
-  </ul>
-<% end %></br>

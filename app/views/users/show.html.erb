@@ -2,7 +2,14 @@
   <div class="user-show" id="welcome">
     <h2>Welcome, <%= @user.username %></h2>
     <h3><%= "#{@user.username}'s Games" %></h3>
+    <% if @user.game.id == 1 %>
+    <p>You have no games</p>
       <%= render partial: 'new_game_form' %>
+    <% else %>
+      <ul>
+        <li><%= link_to @user.game.name, game_path(@user.game.slug) %></li>
+      </ul>
+    <% end %></br>
   </div>
 <% else %>
   <div  id="guest-login">

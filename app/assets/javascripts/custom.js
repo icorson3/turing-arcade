@@ -11,11 +11,11 @@ $(document).ready(function() {
                           }
                         };
       createGame(gameParams);
+      window.location = "/" + gameParams.game.name;
     } else {
       $('#welcome').append('Invalid wifi password. Try again.').css('background-color', '#ffcccc');
     }
   });
-
 
   $("#update-game").on('click', function () {
     var gameId = $(this).parent().parent().parent().find(".game-show").data("game-id");
@@ -32,7 +32,7 @@ $(document).ready(function() {
       url: "/api/v1/games/" + gameId,
       data: gameParams,
       success: function () {
-        $("p").html("Game was successfully updated. Return to all games to see changes.");
+        window.location = "/" + gameParams.game.name;
       }
     });
   });
@@ -46,10 +46,7 @@ $(document).ready(function() {
       type: 'DELETE',
       url: "/api/v1/games/" + gameId,
       success: function() {
-        $("#standard-game").html('<p> The game was successfully deleted.</p>').addClass('deleted-game');
-        $(".game-title").hide();
-        $(".play-link").hide();
-        $(".game-image").hide();
+        window.location = "/games";
       }
     });
   });
