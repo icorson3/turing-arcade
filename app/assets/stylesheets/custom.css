@@ -27,7 +27,8 @@ html, body {
 
 .list-group {
   font-size: 15px;
-  height: 440px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .list-group-item:last-child {
@@ -168,7 +169,6 @@ nav.navbar.navbar-default.navbar-fixed-bottom > .container > p {
 
 #update-game-form {
   width: inherit;
-  height: 240px;
   background-color: white;
   left:0;
   right:0;
@@ -178,8 +178,8 @@ nav.navbar.navbar-default.navbar-fixed-bottom > .container > p {
   border-style: outset;
   border-radius: 15px;
   opacity: .96;
-  top: 900px;
   margin-bottom: 75px;
+  margin-top: 30px;
 }
 
 #new-game {
@@ -207,13 +207,15 @@ nav.navbar.navbar-default.navbar-fixed-bottom > .container > p {
   background-color: yellow;
 }
 
-#update_game_form {
-  margin-bottom: 10px;
-}
-
 .deleted-game {
   background-color: white;
   border-radius: 15px;
   border-style: outset;
   opacity: .96;
+}
+
+.gap {
+  height: 50px;
+  display: block;
+  clear: both;
 }
