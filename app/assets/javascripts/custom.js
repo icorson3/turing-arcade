@@ -11,7 +11,6 @@ $(document).ready(function() {
                           }
                         };
       createGame(gameParams);
-      window.location = "/" + gameParams.game.name;
     } else {
       $('#welcome').append('Invalid wifi password. Try again.').css('background-color', '#ffcccc');
     }
@@ -60,8 +59,7 @@ function createGame(gameParams) {
     data: gameParams,
     dataType: "json",
     success: function(newGame) {
-      var listItem = "<li><a href='/" + newGame.slug + "'>" + newGame.name + "</a></li>";
-      $("#one-game").append(listItem);
+        window.location = "/" + gameParams.game.name;
     },
     error: function(xhr) {
       var errorObject = xhr.responseJSON.errors;
