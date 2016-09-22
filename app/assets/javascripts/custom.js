@@ -60,6 +60,7 @@ function createGame(gameParams) {
     dataType: "json",
     success: function(newGame) {
         window.location = "/" + gameParams.game.name;
+        return false;
     },
     error: function(xhr) {
       var errorObject = xhr.responseJSON.errors;
