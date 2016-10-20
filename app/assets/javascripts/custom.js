@@ -31,7 +31,8 @@ $(document).ready(function() {
       url: "/api/v1/games/" + gameId,
       data: gameParams,
       success: function () {
-        window.location = "/" + gameParams.game.name;
+        paramaterized = gameParams.game.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+        window.location = "/" + paramaterized;
       }
     });
   });
@@ -59,7 +60,8 @@ function createGame(gameParams) {
     data: gameParams,
     dataType: "json",
     success: function(newGame) {
-        window.location = "/" + gameParams.game.name;
+        paramaterized = gameParams.game.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+        window.location = "/" + paramaterized;
         return false;
     },
     error: function(xhr) {
